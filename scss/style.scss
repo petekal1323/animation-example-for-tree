@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.trigger {
+    width: 200px;
+    height: 200px;
+    border: 20px solid #999;
+    background: #ddd;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%);
+    .tree {
+        display: inline-block;
+        transition: transform 500ms ease-in-out;
+        padding: 4px;
+    }
+    &.clicked .tree {
+        transform: rotate(90deg);
+        padding: 0 4px;
+    }
+}
